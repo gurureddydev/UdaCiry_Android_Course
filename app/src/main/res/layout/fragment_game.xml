@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="game"
+            type="com.gurureddy.contactmanagerapp.trivia.fragments.GameFragment" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".trivia.fragments.GameFragment">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/large_200dp"
+                android:layout_marginTop="@dimen/small_20dp"
+                android:src="@drawable/android" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small_20dp"
+                android:padding="@dimen/small_8dp"
+                android:text="@{game.currentQuestion.text}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_30sp"
+                android:textStyle="bold"
+                tools:text="@string/what_is_the_color_of_android_icon"/>
+
+            <RadioGroup
+                android:id="@+id/questionRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_16dp"
+                android:layout_marginTop="@dimen/small_16dp"
+                android:layout_marginEnd="@dimen/small_16dp"
+                android:animateLayoutChanges="true">
+
+                <RadioButton
+                    android:id="@+id/first_answer_radio_btn"
+                    style="@style/RadioStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:checked="true"
+                    android:text="@{game.answers[0]}"
+                    tools:text="@string/green"/>
+
+                <RadioButton
+                    android:id="@+id/second_answer_radio_btn"
+                    style="@style/RadioStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@{game.answers[1]}"
+                    tools:text="@string/blue"/>
+
+                <RadioButton
+                    android:id="@+id/third_answer_radio_btn"
+                    style="@style/RadioStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@{game.answers[2]}"
+                    tools:text="@string/yellow"/>
+
+                <RadioButton
+                    android:id="@+id/fourth_answer_radio_btn"
+                    style="@style/RadioStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@{game.answers[3]}"
+                    tools:text="@string/red"/>
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/submit_btn"
+                style="@style/CommonBtnStyle"
+                android:text="@string/submit" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

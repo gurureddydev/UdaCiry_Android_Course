@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="scoreViewModel"
+            type="com.gurureddy.contactmanagerapp.guesstheword.viewmodel.ScoreViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".guesstheword.fragments.ScoreFragment">
+
+        <TextView
+            android:id="@+id/score_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_18sp"
+            android:layout_centerInParent="true"
+            android:text="@string/your_scoured" />
+
+        <TextView
+            android:id="@+id/score_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@{Integer.toString(scoreViewModel.score)}"
+            style="@style/CommonTextStyle"
+            android:layout_below="@id/score_view"
+            android:layout_centerInParent="true" />
+
+        <Button
+            android:id="@+id/try_again_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/try_again"
+            android:layout_alignParentBottom="true"
+            style="@style/CommonBtnStyle"
+            android:layout_marginBottom="@dimen/normal_32dp"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+</layout>

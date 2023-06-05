@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="sleep"
+            type="com.gurureddy.contactmanagerapp.sleepNapApp.database.SleepNight" />
+
+        <variable
+            name="clickListener"
+            type="com.gurureddy.contactmanagerapp.sleepNapApp.sleepTracker.SleepNightListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> clickListener.onClick(sleep)}">
+
+        <ImageView
+            android:id="@+id/sleep_quality_img"
+            android:layout_width="@dimen/large_64dp"
+            android:layout_height="@dimen/large_60dp"
+            android:layout_marginStart="@dimen/small_16dp"
+            android:layout_marginBottom="@dimen/small_8dp"
+            android:layout_marginTop="@dimen/small_8dp"
+            tools:src="@drawable/sleep3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:sleepImage="@{sleep}" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/sleep_length_tv"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/small_8dp"-->
+<!--            android:layout_marginTop="@dimen/small_8dp"-->
+<!--            android:text="WEDNESDAY"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toEndOf="@id/sleep_quality_img"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/sleep_quality_img"-->
+<!--            app:sleepDuringFormatted="@{sleep}" />-->
+
+        <TextView
+            android:id="@+id/sleep_quality_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_8dp"
+            android:layout_marginStart="@dimen/small_16dp"
+            app:layout_constraintStart_toStartOf="@id/sleep_quality_img"
+            app:layout_constraintTop_toBottomOf="@id/sleep_quality_img"
+            app:layout_constraintEnd_toEndOf="@id/sleep_quality_img"
+            app:sleepQualityString="@{sleep}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

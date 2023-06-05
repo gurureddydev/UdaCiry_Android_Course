@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="video"
+            type="com.gurureddy.contactmanagerapp.offlineVideo.domain.Video" />
+
+        <variable
+            name="videoCallback"
+            type="com.gurureddy.contactmanagerapp.offlineVideo.ui.VideoClick" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_8dp"
+        android:layout_marginBottom="@dimen/small_8dp"
+        app:cardCornerRadius="@dimen/small_0dp"
+        app:cardElevation="@dimen/small_8dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/left_wall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/small_8dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/right_wall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/small_8dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/small_8dp" />
+
+            <ImageView
+                android:id="@+id/play_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_16dp"
+                android:src="@drawable/baseline_play_circle_outline_24"
+                app:layout_constraintStart_toStartOf="@id/left_wall"
+                app:layout_constraintTop_toBottomOf="@id/video_thumbnail" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="@dimen/small_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_8dp"
+                android:layout_marginTop="@dimen/small_16dp"
+                android:text="@{video.title}"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/text_black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/play_icon"
+                app:layout_constraintStart_toStartOf="@id/right_wall"
+                app:layout_constraintTop_toBottomOf="@id/video_thumbnail"
+                tools:text="Video Title" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="@dimen/small_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_8dp"
+                android:layout_marginBottom="@dimen/small_16dp"
+                android:text="@{video.shortDescription}"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/text_light"
+                android:textSize="@dimen/text_size_14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/right_wall"
+                app:layout_constraintStart_toStartOf="@id/left_wall"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                tools:text="this is a video" />
+
+
+            <ImageView
+                android:id="@+id/video_thumbnail"
+                android:layout_width="@dimen/small_0dp"
+                android:layout_height="@dimen/small_0dp"
+                android:adjustViewBounds="false"
+                android:cropToPadding="false"
+                android:scaleType="centerCrop"
+                app:imageUrls="@{video.thumbnail}"
+                app:layout_constraintDimensionRatio="h,4:3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+            <View
+                android:id="@+id/clickableOverlay"
+                android:layout_width="@dimen/small_0dp"
+                android:layout_height="@dimen/small_0dp"
+                android:background="?attr/selectableItemBackground"
+                android:onClick="@{()->videoCallback.onClick(video)}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sleep_navigation"
+    app:startDestination="@id/sleepTrackerFragment">
+
+    <fragment
+        android:id="@+id/sleepTrackerFragment"
+        android:name="com.gurureddy.contactmanagerapp.sleepNapApp.sleepTracker.SleepTrackerFragment"
+        android:label="SleepTrackerFragment"
+        tools:layout="@layout/fragment_sleep_tracker">
+        <action
+            android:id="@+id/action_sleepTrackerFragment_to_sleepQualityFragment"
+            app:destination="@id/sleepQualityFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_right" />
+        <action
+            android:id="@+id/action_sleepTrackerFragment_to_sleepDetailsFragment"
+            app:destination="@id/sleepDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/sleepQualityFragment"
+        android:name="com.gurureddy.contactmanagerapp.sleepNapApp.sleepQuality.SleepQualityFragment"
+        android:label="fragment_sleep_quality"
+        tools:layout="@layout/fragment_sleep_quality">
+        <argument
+            android:name="sleepNight"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_sleepQualityFragment_to_sleepTrackerFragment"
+            app:destination="@id/sleepTrackerFragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/sleepTrackerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/sleepDetailsFragment"
+        android:name="com.gurureddy.contactmanagerapp.sleepNapApp.sleepDetails.SleepDetailsFragment"
+        android:label="fragment_sleep_details"
+        tools:layout="@layout/fragment_sleep_details">
+
+        <argument
+            android:name="sleepNight"
+            app:argType="long" />
+
+        <action
+            android:id="@+id/action_sleepDetailsFragment_to_sleepTrackerFragment"
+            app:destination="@id/sleepTrackerFragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@+id/sleepTrackerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

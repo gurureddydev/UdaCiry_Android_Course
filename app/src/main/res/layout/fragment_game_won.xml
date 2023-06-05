@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/green"
+        tools:context=".trivia.fragments.GameWonFragment">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/large_400dp"
+            android:src="@drawable/happy_android"
+            android:layout_marginTop="@dimen/small_20dp"/>
+
+        <TextView
+            android:text="@string/congratulations"
+            style="@style/CommonTextStyle" />
+
+        <Button
+            android:id="@+id/next_match_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next_match"
+            android:layout_gravity="center"
+            android:textColor="@color/green"
+            style="@style/ButtonStyle"/>
+
+    </LinearLayout>
+</layout>

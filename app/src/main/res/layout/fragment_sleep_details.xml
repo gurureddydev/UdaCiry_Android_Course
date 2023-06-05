@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="sleepDetailViewModel"
+            type="com.gurureddy.contactmanagerapp.sleepNapApp.sleepDetails.SleepQualityDetailsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".sleepNapApp.sleepDetails.SleepDetailsFragment">
+
+        <ImageView
+            android:id="@+id/quality_image"
+            android:layout_width="@dimen/large_64dp"
+            android:layout_height="@dimen/large_60dp"
+            android:layout_marginStart="@dimen/small_8dp"
+            android:layout_marginTop="@dimen/normal_58dp"
+            android:layout_marginEnd="@dimen/small_8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:sleepImage="@{sleepDetailViewModel.night}" />
+
+        <TextView
+            android:id="@+id/quality_str"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_20dp"
+            android:layout_marginStart="@dimen/small_8dp"
+            android:layout_marginTop="@dimen/normal_52dp"
+            android:layout_marginEnd="@dimen/small_8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/quality_image"
+            app:sleepQualityString="@{sleepDetailViewModel.night}" />
+
+        <TextView
+            android:id="@+id/sleep_length_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/small_20dp"
+            android:layout_marginStart="@dimen/small_8dp"
+            android:layout_marginTop="@dimen/normal_52dp"
+            android:layout_marginEnd="@dimen/small_8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/quality_str"
+            app:sleepDuringFormatted="@{sleepDetailViewModel.night}" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_8dp"
+            android:layout_marginEnd="@dimen/small_8dp"
+            android:layout_marginBottom="@dimen/normal_32dp"
+            android:onClick="@{() -> sleepDetailViewModel.onClose()}"
+            android:text="@string/close"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">Contact Manager App</string>
+    <string name="roll">Roll</string>
+    <string name="guru_prasad">Guru Prasad</string>
+    <string name="yellow_stars">Yellow Stars</string>
+    <string name="bio">The Stylish Instagram bio for boys should be captivating and reflect your personality. So whether you want to showcase your sense of humor, love of adventure, or appreciation for the better things in life, the Stylish bio for boys can be the perfect way to express your entire personality.The Stylish Instagram bio for boys should be captivating and reflect your personality. So whether you want to showcase your sense of humor, love of adventure, or appreciation for the better things in life, the Stylish bio for boys can be the perfect way to express your entire personality.</string>
+    <string name="name_hint">Name</string>
+    <string name="done_btn">Done</string>
+    <string name="box_txt">Box One</string>
+    <string name="box_two">Box Two</string>
+    <string name="box_three">Box Three</string>
+    <string name="box_four">Box Four</string>
+    <string name="box_five">Box Five</string>
+    <string name="how_to_play">How To Play</string>
+    <string name="tap_the_screen_btn">Tap the screen and button</string>
+    <string name="red">Red</string>
+    <string name="yellow">Yellow</string>
+    <string name="green">Green</string>
+    <string name="title_android_trivia_question">Android Trivia (%1$d/%2$d)</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="android_trivia"><font color="#00ff00">Android</font> Trivia</string>
+    <string name="play_button">Play</string>
+    <string name="what_is_the_color_of_android_icon">What is the color of Android Icon</string>
+    <string name="blue">Blue</string>
+    <string name="submit">SUBMIT</string>
+    <string name="try_again">Try Again</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="next_match">Next Match</string>
+    <string name="about">About</string>
+    <string name="about_text">Android Trivia will help remind you of important concepts you have learned and will learn in android development \n\n Consider modifying the questions and graphics to make this game your own!</string>
+    <string name="share_title">share</string>
+    <string name="share_success_text">Share Text successfully</string>
+    <string name="string_rules">Rules</string>
+    <string name="get_ready_to">Get ready to</string>
+    <string name="guess_the_word">"Guess The Word"</string>
+    <string name="the_word_is">The Word is</string>
+    <string name="skip">Skip</string>
+    <string name="got_it">Got it</string>
+    <string name="your_scoured">Your Scoured</string>
+    <string name="quote_format">\"%s\"</string>
+
+    <!-- Button labels -->
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="clear">Clear</string>
+
+    <!-- contentDescription strings for quality icons -->
+    <string name="quality_0">Sleep Quality 0</string>
+    <string name="quality_1">Sleep Quality 1</string>
+    <string name="quality_2">Sleep Quality 2</string>
+    <string name="quality_3">Sleep Quality 3</string>
+    <string name="quality_4">Sleep Quality 4</string>
+    <string name="quality_5">Sleep Quality 5</string>
+
+    <!-- Output to TextView styled with a little HTML -->
+    <string name="title"><![CDATA[<h3>HERE IS YOUR SLEEP DATA</h3>]]></string>
+    <string name="start_time"><![CDATA[<b>Start:</b>]]></string>
+    <string name="end_time"><![CDATA[<b>End:</b>]]></string>
+    <string name="quality"><![CDATA[<b>Quality:</b>]]></string>
+    <string name="hours_slept"><![CDATA[<b>Hours:Minutes:Seconds</b>]]></string>
+
+    <!-- Sleep quality strings -->
+    <string name="how_was_hour_sleep">How was your sleep?</string>
+    <string name="zero_very_bad">Very bad</string>
+    <string name="one_poor">Poor</string>
+    <string name="two_soso">So-so</string>
+    <string name="three_ok">OK</string>
+    <string name="four_pretty_good">Pretty good</string>
+    <string name="five_excellent">Excellent!</string>
+
+    <string name="cleared_message">All your data is gone forever.</string>
+    <string name="header_text">Sleep Results</string>
+    <string name="close">Close</string>
+    <string name="minutes_length">%d minutes on %s</string>
+    <string name="hours_length">%d hours on %s</string>
+    <string name="seconds_length">%d seconds on %s</string>
+    <string name="start_btn">Start</string>
+    <string name="clear_btn">Clear</string>
+    <string name="stop_btn">Stop</string>
+
+    <string name="show_all">Show all</string>
+    <string name="show_rent">Rent</string>
+    <string name="show_buy">Buy</string>
+    <string name="type_rent">Rent</string>
+    <string name="type_sale">Sale</string>
+    <string name="display_type">For %s</string>
+    <string name="display_price_monthly_rental">$%,.0f/month</string>
+    <string name="display_price">$%,.0f</string>
+    <string name="display_rent">Rent</string>
+    <string name="display_buy">Buy</string>
+
+</resources>

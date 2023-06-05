@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.gurureddy.contactmanagerapp.offlineVideo.ui.DevByteViewModel" />
+
+<!--        <variable-->
+<!--            name="videoCallback"-->
+<!--            type="" />-->
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_grey"
+        tools:context=".offlineVideo.ui.DevByteFragment">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            goneIfNull="@{viewModel.playList}"
+            android:layout_gravity="center" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycler_view"
+            tools:listitem="@layout/dev_byte_item"/>
+
+
+    </FrameLayout>
+</layout>

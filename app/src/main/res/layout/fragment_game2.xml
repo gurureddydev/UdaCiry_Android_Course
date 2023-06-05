@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="gameViewModel"
+            type="com.gurureddy.contactmanagerapp.guesstheword.viewmodel.GameFragmentViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".guesstheword.fragments.GameFragment">
+
+        <TextView
+            android:id="@+id/timer_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/get_ready_tv"
+            android:layout_centerInParent="true"
+            android:text="@{gameViewModel.currentTimeString}"
+            android:layout_marginBottom="@dimen/normal_32dp"
+            android:textSize="@dimen/text_size_40sp"
+            tools:text="00:00" />
+
+
+        <TextView
+            android:id="@+id/get_ready_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/the_word_is"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <TextView
+            android:id="@+id/guess_word_tv"
+            style="@style/CommonTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/get_ready_tv"
+            android:layout_centerInParent="true"
+            android:text="@{gameViewModel.word}" />
+
+        <TextView
+            android:id="@+id/score_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/skip_btn"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/small_8dp"
+            android:text="@{Integer.toString(gameViewModel.score)}"
+            android:textSize="@dimen/text_size_24sp" />
+
+        <Button
+            android:id="@+id/skip_btn"
+            style="@style/CommonBtnStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/small_16dp"
+            android:layout_marginBottom="@dimen/normal_32dp"
+            android:onClick="@{()->gameViewModel.onSkip()}"
+            android:text="@string/skip" />
+
+        <Button
+            android:id="@+id/correct_btn"
+            style="@style/CommonBtnStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/small_16dp"
+            android:layout_marginBottom="@dimen/normal_32dp"
+            android:onClick="@{()->gameViewModel.onCorrect()}"
+            android:text="@string/got_it" />
+
+    </RelativeLayout>
+</layout>

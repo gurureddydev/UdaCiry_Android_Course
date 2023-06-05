@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="NameStyle">
+        <item name="android:layout_marginTop">@dimen/margin_top</item>
+        <item name="android:layout_marginStart">@dimen/margin_top</item>
+        <item name="android:layout_marginEnd">@dimen/margin_top</item>
+        <item name="android:paddingTop">@dimen/padding_top</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">30sp</item>
+        <item name="fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="WhiteBox">
+        <item name="android:background">@color/white</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/box_text_size</item>
+    </style>
+
+    <style name="RadioStyle">
+        <item name="android:layout_marginStart">@dimen/small_20dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_20sp</item>
+    </style>
+
+    <style name="CommonBtnStyle">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+<!--        <item name="android:layout_marginTop">@dimen/normal_52dp</item>-->
+        <item name="android:backgroundTint">@color/green</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+<!--        <item name="android:layout_marginTop">@dimen/normal_52dp</item>-->
+        <item name="android:backgroundTint">@color/white</item>
+    </style>
+
+    <style name="CommonTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_24sp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+<!--        <item name="android:layout_marginTop">@dimen/normal_32dp</item>-->
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>
